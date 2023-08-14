@@ -5,6 +5,7 @@
 *.ico
 
 /static/fontawesome-free-6.4.0-web
+/static/fontawesome-free-6.4.0-web/
 /static/images
 /static/svg
 
