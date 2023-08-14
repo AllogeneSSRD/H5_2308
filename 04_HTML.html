@@ -11,22 +11,33 @@
             border-width: 1px;
             border-color: black;
         }
-        img{
+        #inline-block-ico {
+            /* https://zhuanlan.zhihu.com/p/35848175
+             * font-size: 0; 在IE7及以下浏览器依然会残留1px的间隙
+            */
+            font-size: 0;
+            -webkit-text-size-adjust:none;/*支持chrome 不支持Safari*/
+        }
+        img {
             max-width: 64px;
             max-height: 64px;
         }
-        .box-avatar{
+        /** 使用 flew *-content
+          * 子元素自动压缩，不会产生 overflow
+        */
+        .box-avatar {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;/*水平居中 对 display: block 无效*/
+            place-content: center start;/*可代替下面俩 接受 1 or 2 值*/
             align-content: center;/*垂直居中 对 flex-wrap: nowarp 无效*/
-            width: 80px;
+            justify-content: center;/*水平居中 对 display: block 无效*/
+            width: 160px;
             height: 80px;
-            background-color: aquamarine;
+            background-color: aqua;
         }
-        .avatar{
-            /* margin: auto; */
-            /*水平居中 这条属性会覆盖justify-content*/
+        .avatar {
+            margin: auto;
+            /*水平居中 这条属性可代替 *-content */
             width: 100%;
             height: 100%;
             background-color: #baccd9;
@@ -36,14 +47,14 @@
           * 父元素为相对定位，子元素设置绝对定位
           * 子元素未知高度和宽度
         */
-        .box-aaaa{
+        .box-aaaa {
             display: inline-block;
             position: relative;
             width: 80px;
             height: 80px;
             overflow: hidden;
         }
-        .aaaa{
+        .aaaa {
             position: absolute;
             left: 50%;
             top: 50%;
@@ -57,7 +68,7 @@
     <div class="box-avatar">
         <img class="avatar" src="/images/e7838cc9-ee3d-4dd6-9a62-448a240a26e4.tmp.ico" alt="发现">
     </div>
-    <div>
+    <div id="inline-block-ico">
         <div class="box-aaaa">
             <img class="aaaa" src="/images/ed438eb9-8a7c-400b-9f09-879298ab8c05.tmp.ico" alt="猫猫，启动！">
         </div>
