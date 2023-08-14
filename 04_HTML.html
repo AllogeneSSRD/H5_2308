@@ -2,9 +2,16 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="stylesheet" href="./css/04_style.css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.0/css/all.css" rel="stylesheet">
+    <link rel="import" href="./fontawesome-free-6.4.0-web/svgs/brands">
+<!--     
+    <link rel="icon" href="/ico/favicon32.ico" sizes="32x32" type="image/png"> 
+-->
+    <title>Document</title>
     <style type="text/css">
         *{
             border-style: dashed;
@@ -69,6 +76,8 @@
         }
         .aaaa {
             position: absolute;
+            max-width: 95%;
+            max-height: 95%;
             left: 50%;
             top: 50%;
             transform: translateX(-50%) translateY(-50%);
@@ -76,8 +85,9 @@
     </style>
 </head>
 <body>
-    <h1>这是一个一级标题</h1>
+    <h1 style="text-align: center;">按ctrl+f5键 强制刷新屏幕</h1>
     <div style="display: flex;
+                flex-direction: column;
                 font: 20px YouYuan;
                 color: #fbecde;
                 background-color: #126e82;">
@@ -85,16 +95,66 @@
     </div>
     <!-- <marquee loop="0" bgcolor="pink">在这里放一只猫猫，学累的人可以摸摸她，但是别摸死了</marquee> -->
     <div class="box-avatar">
-        <img class="avatar" src="../images/e7838cc9-ee3d-4dd6-9a62-448a240a26e4.tmp.ico" alt="发现">
+        <img class="avatar" src="./images/e7838cc9-ee3d-4dd6-9a62-448a240a26e4.tmp.ico" alt="发现">
     </div>
     <div id="inline-block-ico">
         <div class="box-aaaa">
-            <img class="aaaa" src="../images/ed438eb9-8a7c-400b-9f09-879298ab8c05.tmp.ico" alt="猫猫，启动！">
+            <img class="aaaa" src="./images/ed438eb9-8a7c-400b-9f09-879298ab8c05.tmp.ico" alt="猫猫，启动！">
         </div>
         <div class="box-aaaa">
-            <img class="aaaa" src="../images/ed438eb9-8a7c-400b-9f09-879298ab8c05.tmp.ico" alt="猫猫，启动！">
+            <img class="aaaa" src="./images/ed438eb9-8a7c-400b-9f09-879298ab8c05.tmp.ico" alt="猫猫，启动！">
         </div>
+        <div class="box-aaaa">
+            <img class="aaaa" src="favicon.ico" alt="猫猫，启动！">
+        </div>
+        <div class="box-aaaa">
+            <img class="aaaa" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAAXNSR0IArs4c6QAABNpJRE
+            FUWEfVmW1olWUYx3/3tjP34pbOE25uU1ISt2gWQpJsmEtbYkIZlJH0IYjKiOhbStgLkatPhWBFUV+MiiijJTUnQjmsCcs2LNdAY9Te8uTa5ube77ieP
+            c8452znee77nFPh/e2c57qu+39fz/VcL/9bkcLSWucB1cAWoAJYCywHClyzw0A/0AmcB74FvlNKjSa7rbJV1FqLTh3wKHAPkGtp4yrwFfA+0KiU0jb6
+            VoC11ruAA8B6m018ZNuAl5RSR03tGQHWWq8B3gK2mRq2lGsCnlRKXQjSCwSstd4NvAMUBhlL8fkQ8LhS6mM/OwkBu7H6CrA/RSC26q8CzyeK7QUBu2A
+            PAU/Z7pYmeXmjEiLzPshEgA8Cz9lsfnF0imP9o7QPTdA3NuWoFudkUVWYzZ3hXCoLQjbmRLZeKbUvXmkeYDdmPzK1PqVh//nLHPldUm7itaM4n9cqii
+            jKzjA1LXIPxcd0DGA3G/xo+oFdnphhR0svXaOzHg1aS0IZNG1aQWlOZpCo91y8cGt09ogHfNwmdd1+qtsYrIfg+kWZtG4uIyswP82dqUkpdZf3a07NL
+            QqfmR790G9DHOwcMBWPkdtTXsDrlUU2uvcrpT4XBQewmxXOmlYwiduVx7tsNpwne25LuU08twO3SNbwAIvLG00RfNE7wt72iKn4gnL71i7l6RusatF2
+            pdQ3HmCpLg+aIjjQMcB7XVKYkl9JhMUnSqndym0R/wJyTLd/rC3Csb4RU/EF5TYuzeHobdKJGq8xYJkAtgoHMX/fmX5aBkQ/+SXZou2OMlsDdQLYqqq
+            djIyxp1V68tRXfeUyHilfbGOoXgB/Cew01drZ0kfr3+Om4r5y6wqyObmpxMZWgwCW0WWdqVbt6V46hidMxX3lVuVl8X1NqY2tDgF8CQibav3PgCMCWN
+            xl1EqlUt0SOUSaonfXG/tr0hjwL8OTbD3dY/oirOQsPj4HsFFIJNPo2KDurF3J4lBgR+SEROBHl85UlugQhqXa+egC01o6KluQtzcsWUTDxuIgMSetB
+            RaOfzscBKVh5XMKx93A135H8wBL/R+cmklbHpbCsSY/5PQlhoC3GzU/Xu/QU7eKdMazlx1WNHaZAJ5tfsSzWmvf9lIm4rFp7Uy+0rzXNNuPRvFvUOa7
+            5upSp4nvHptmcHImaLL+VCn1gAc4MCyiN0xHTj5cFebekvygjyz6eUwDL8B/AqqCLIg3Xvx1IOV+WLLCmzeHWZ2XFbSlPI8dkdywEGbSdwhNVzh4CCU
+            sztSUmRSM2CHUM6C19h3zJZarT3WbeMRY5siG5dSGfYedE0qpOdZ0ISJFpmePQY/Z+MqkZtsPPYFchMRnYSiTZ89FuDQ+nRC8AbHiT6S4oSH0akKqSt
+            ieNy4OcnZwnMjELJjczAwnnwqPtqskf47ZkQN+8Meww7ddGJnk6vSMIx/OzqSiIJtnVl8XxAL5U1VRoRFY/YzfefKCZmSg62UJlWuHbo0CfW0Q2tFvU
+            Wv9MHDYlNFMPgIQZmavUupDPxuBHbPrbbmUeRvYmgIgP9UTwBNpuZSJ87YUlxdMKqLhweTa62WPmTTRMfJwHOjoi0XhM4wpLteOdF0N/8nFYrwHtNZC
+            28jV7WbgJuBG9+rWo3OuAH+6V7c/u1e3zUop+T+p9Q9BpPGeBjSq+gAAAABJRU5ErkJggg==" alt="QQ图标-base64">
+        </div>
+        <div class="box-aaaa">
+            <img class="aaaa" src="./images/bilibili/webp/崩坏3·光辉矢愿_大佬喝可乐.png" alt="崩坏3·光辉矢愿_大佬喝可乐">
+        </div>
+        <div class="box-aaaa">
+            <img class="aaaa" src="favicon.ico" alt="猫猫，启动！">
+        </div>
+
+
     </div>
+    ul>li*5>a
+    <ul>
+        <li>
+            <a href="">
+                <img class="svg-icon" src="./fontawesome-free-6.4.0-web/svgs/brands/bilibili.svg" alt="bilibili"></a>
+        </li>
+        <li><a href="">
+            <img class="svg-icon" src="bilibili.svg" alt=""></a>
+        </li>
+        <li><a href="">
+            <img class="svg-icon" src="" alt=""></a>
+        </li>
+        <li><a href="">
+            <img class="svg-icon" src="" alt=""></a>
+        </li>
+        <li><a href="">
+            <img class="svg-icon" src="" alt=""></a>
+        </li>
+    </ul>
+
+
 
     <div id="documentElement">
         <!-- https://blog.csdn.net/u010200222/article/details/45622687 -->
