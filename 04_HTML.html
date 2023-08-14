@@ -3,11 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        *{
+            border-style: dashed;
+            border-width: 1px;
+            border-color: black;
+        }
+        img{
+            display: flex;
+            max-width: 64px;
+            max-height: 64px;
+        }
+        .box-avatar{
+            display: flex;
+            justify-content: center;/*水平居中*/
+            align-items: center;/*垂直居中*/
+            width: 80px;
+            height: 80px;
+            background-color: aquamarine;
+        }
+        .avatar{
+            margin: auto;/*水平居中 这条属性被justify-content覆盖*/
+            width: 100%;
+            height: 100%;
+            background-color: #baccd9;
+            border-radius: 5%;
+        }
+        .box-aaaa{
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+            overflow: hidden;
+        }
+        .aaaa{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+    </style>
 </head>
 <body>
     <h1>这是一个一级标题</h1>
     <marquee loop="0" bgcolor="pink">在这里放一只猫猫，学累的人可以摸摸她，但是别摸死了</marquee>
-    <img src="/images/e7838cc9-ee3d-4dd6-9a62-448a240a26e4.tmp.ico" alt="发现">
-    <img src="/images/ed438eb9-8a7c-400b-9f09-879298ab8c05.tmp.ico" alt="猫猫，启动！">
+    <div class="box-avatar">
+        <img class="avatar" src="/images/e7838cc9-ee3d-4dd6-9a62-448a240a26e4.tmp.ico" alt="发现">
+    </div>
+    <div>
+        <div class="box-aaaa">
+            <img class="aaaa" src="/images/ed438eb9-8a7c-400b-9f09-879298ab8c05.tmp.ico" alt="猫猫，启动！">
+        </div>
+        <div class="box-aaaa">
+            <img class="aaaa" src="/images/ed438eb9-8a7c-400b-9f09-879298ab8c05.tmp.ico" alt="猫猫，启动！">
+        </div>
+    </div>
 </body>
 </html>
