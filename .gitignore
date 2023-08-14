@@ -4,4 +4,8 @@
 /下载
 *.ico
 
+/static/fontawesome-free-6.4.0-web
+/static/images
+/static/svg
+
 /fontawesome-free-6.4.0-web
