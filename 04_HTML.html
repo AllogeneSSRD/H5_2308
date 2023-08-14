@@ -12,25 +12,30 @@
             border-color: black;
         }
         img{
-            display: flex;
             max-width: 64px;
             max-height: 64px;
         }
         .box-avatar{
             display: flex;
-            justify-content: center;/*水平居中*/
-            align-items: center;/*垂直居中*/
+            flex-wrap: wrap;
+            justify-content: center;/*水平居中 对 display: block 无效*/
+            align-content: center;/*垂直居中 对 flex-wrap: nowarp 无效*/
             width: 80px;
             height: 80px;
             background-color: aquamarine;
         }
         .avatar{
-            margin: auto;/*水平居中 这条属性被justify-content覆盖*/
+            /* margin: auto; */
+            /*水平居中 这条属性会覆盖justify-content*/
             width: 100%;
             height: 100%;
             background-color: #baccd9;
-            border-radius: 5%;
+            border-radius: 8%;
         }
+        /** 使用 inline-block 行内块元素布局 
+          * 父元素为相对定位，子元素设置绝对定位
+          * 子元素未知高度和宽度
+        */
         .box-aaaa{
             display: inline-block;
             position: relative;
