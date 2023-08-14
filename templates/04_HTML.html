@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="stylesheet" href="./css/04_style.css">
+    <!-- <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.0/css/all.css" rel="stylesheet"> -->
+<!--     
+    <link rel="icon" href="/ico/favicon32.ico" sizes="32x32" type="image/png"> 
+-->
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            border-style: dashed;
+            border-width: 1px;
+            border-color: black;
+        }
+        *:hover {
+            border-style: dotted;
+            border-width: 2px;
+            border-color: #fff;
+            /* background-color: #fff; */
+        }
+        html{
+            background-color: #e2e1e4;
+        }
+        #documentElement{
+            /* https://www.cnblogs.com/chendc/p/9298832.html */
+            font: 8px "sans-serif";
+        }
+        img {
+            max-width: 64px;
+            max-height: 64px;
+        }
+        /** 使用 flew *-content
+          * 子元素自动压缩，不会产生 overflow
+        */
+        .box-avatar {
+            display: flex;
+            flex-wrap: wrap;
+            place-content: center center;/*可代替下面俩 接受 1 or 2 值*/
+            align-content: center;/*垂直居中 对 flex-wrap: nowarp 无效*/
+            justify-content: center;/*水平居中 对 display: block 无效*/
+            width: 160px;
+            height: 80px;
+            background-color: aqua;
+        }
+        .avatar {
+            margin: auto;
+            /*水平居中 这条属性可代替 *-content */
+            width: 100%;
+            height: 100%;
+            background-color: #baccd9;
+            border-radius: 8%;
+        }
+        #inline-block-ico {
+            /* https://zhuanlan.zhihu.com/p/35848175
+             * font-size: 0; 在IE7及以下浏览器依然会残留1px的间隙
+            */
+            font-size: 0;
+            -webkit-text-size-adjust:none;/*支持chrome 不支持Safari*/
+        }
+        /** 使用 inline-block 行内块元素布局 
+          * 父元素为相对定位，子元素设置绝对定位
+          * 子元素未知高度和宽度
+        */
+        .box-aaaa {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+            overflow: hidden;
+        }
+        .aaaa {
+            position: absolute;
+            max-width: 95%;
+            max-height: 95%;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">按ctrl+f5键 强制刷新屏幕</h1>
+    <div style="display: flex;
+                flex-direction: column;
+                font: 20px YouYuan;
+                color: #fbecde;
+                background-color: #126e82;">
+        <div style="margin: auto;">在这里放一只猫猫，学累的人可以摸摸她，但是别摸死了</div>
+    </div>
+    <!-- <marquee loop="0" bgcolor="pink">在这里放一只猫猫，学累的人可以摸摸她，但是别摸死了</marquee> -->
+    <div class="box-avatar">
+        <img class="avatar" src="./images/e7838cc9-ee3d-4dd6-9a62-448a240a26e4.tmp.ico" alt="发现">
+    </div>
+    <div id="inline-block-ico">
+        <div class="box-aaaa">
+            <img class="aaaa" src="./images/ed438eb9-8a7c-400b-9f09-879298ab8c05.tmp.ico" alt="猫猫，启动！">
+        </div>
+        <div class="box-aaaa">
+            <img class="aaaa" src="./images/ed438eb9-8a7c-400b-9f09-879298ab8c05.tmp.ico" alt="猫猫，启动！">
+        </div>
+        <div class="box-aaaa">
+            <img class="aaaa" src="favicon.ico" alt="猫猫，启动！">
+        </div>
+        <div class="box-aaaa">
+            <img class="aaaa" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAAXNSR0IArs4c6QAABNpJRE
+            FUWEfVmW1olWUYx3/3tjP34pbOE25uU1ISt2gWQpJsmEtbYkIZlJH0IYjKiOhbStgLkatPhWBFUV+MiiijJTUnQjmsCcs2LNdAY9Te8uTa5ube77ieP
+            c8452znee77nFPh/e2c57qu+39fz/VcL/9bkcLSWucB1cAWoAJYCywHClyzw0A/0AmcB74FvlNKjSa7rbJV1FqLTh3wKHAPkGtp4yrwFfA+0KiU0jb6
+            VoC11ruAA8B6m018ZNuAl5RSR03tGQHWWq8B3gK2mRq2lGsCnlRKXQjSCwSstd4NvAMUBhlL8fkQ8LhS6mM/OwkBu7H6CrA/RSC26q8CzyeK7QUBu2A
+            PAU/Z7pYmeXmjEiLzPshEgA8Cz9lsfnF0imP9o7QPTdA3NuWoFudkUVWYzZ3hXCoLQjbmRLZeKbUvXmkeYDdmPzK1PqVh//nLHPldUm7itaM4n9cqii
+            jKzjA1LXIPxcd0DGA3G/xo+oFdnphhR0svXaOzHg1aS0IZNG1aQWlOZpCo91y8cGt09ogHfNwmdd1+qtsYrIfg+kWZtG4uIyswP82dqUkpdZf3a07NL
+            QqfmR790G9DHOwcMBWPkdtTXsDrlUU2uvcrpT4XBQewmxXOmlYwiduVx7tsNpwne25LuU08twO3SNbwAIvLG00RfNE7wt72iKn4gnL71i7l6RusatF2
+            pdQ3HmCpLg+aIjjQMcB7XVKYkl9JhMUnSqndym0R/wJyTLd/rC3Csb4RU/EF5TYuzeHobdKJGq8xYJkAtgoHMX/fmX5aBkQ/+SXZou2OMlsDdQLYqqq
+            djIyxp1V68tRXfeUyHilfbGOoXgB/Cew01drZ0kfr3+Om4r5y6wqyObmpxMZWgwCW0WWdqVbt6V46hidMxX3lVuVl8X1NqY2tDgF8CQibav3PgCMCWN
+            xl1EqlUt0SOUSaonfXG/tr0hjwL8OTbD3dY/oirOQsPj4HsFFIJNPo2KDurF3J4lBgR+SEROBHl85UlugQhqXa+egC01o6KluQtzcsWUTDxuIgMSetB
+            RaOfzscBKVh5XMKx93A135H8wBL/R+cmklbHpbCsSY/5PQlhoC3GzU/Xu/QU7eKdMazlx1WNHaZAJ5tfsSzWmvf9lIm4rFp7Uy+0rzXNNuPRvFvUOa7
+            5upSp4nvHptmcHImaLL+VCn1gAc4MCyiN0xHTj5cFebekvygjyz6eUwDL8B/AqqCLIg3Xvx1IOV+WLLCmzeHWZ2XFbSlPI8dkdywEGbSdwhNVzh4CCU
+            sztSUmRSM2CHUM6C19h3zJZarT3WbeMRY5siG5dSGfYedE0qpOdZ0ISJFpmePQY/Z+MqkZtsPPYFchMRnYSiTZ89FuDQ+nRC8AbHiT6S4oSH0akKqSt
+            ieNy4OcnZwnMjELJjczAwnnwqPtqskf47ZkQN+8Meww7ddGJnk6vSMIx/OzqSiIJtnVl8XxAL5U1VRoRFY/YzfefKCZmSg62UJlWuHbo0CfW0Q2tFvU
+            Wv9MHDYlNFMPgIQZmavUupDPxuBHbPrbbmUeRvYmgIgP9UTwBNpuZSJ87YUlxdMKqLhweTa62WPmTTRMfJwHOjoi0XhM4wpLteOdF0N/8nFYrwHtNZC
+            28jV7WbgJuBG9+rWo3OuAH+6V7c/u1e3zUop+T+p9Q9BpPGeBjSq+gAAAABJRU5ErkJggg==" alt="QQ图标-base64">
+        </div>
+        <div class="box-aaaa">
+            <img class="aaaa" src="./images/bilibili/emoticon/崩坏3·光辉矢愿_大佬喝可乐.png" alt="崩坏3·光辉矢愿_大佬喝可乐">
+        </div>
+        <div class="box-aaaa">
+            <img class="aaaa" src="./images/bilibili/logo/c8fd97a40bf79f03e7b76cbc87236f612caef7b2.png" alt="bilibili">
+        </div>
+
+
+    </div>
+    <!-- ul>li*5>a -->
+    😊
+    <ul>
+        <li>
+            <a href="">
+                <img class="svg-icon" src="./fontawesome-free-6.4.0-web/svgs/brands/bilibili.svg" alt="bilibili"></a>
+        </li>
+        <li><a href="https://www.bilibili.com">
+            <img class="svg-icon" src="./svg/bilibili.svg" alt="哔哩哔哩-bilibili"></a>
+        </li>
+        <li><a href="">
+            <img class="svg-icon" src="" alt=""></a>
+        </li>
+        <li><a href="">
+            <img class="svg-icon" src="" alt=""></a>
+        </li>
+        <li><a href="">
+            <img class="svg-icon" src="" alt=""></a>
+        </li>
+    </ul>
+
+
+
+    <div id="documentElement">
+        <!-- https://blog.csdn.net/u010200222/article/details/45622687 -->
+        <script type="text/javascript">
+            document.write("浏览器分辨率："+document.documentElement.clientWidth+"*"+document.documentElement.clientHeight);
+            document.write("<br/>窗体宽度："+document.documentElement.clientWidth);
+            document.write("<br/>窗体高度："+document.documentElement.clientHeight);
+            document.write("<br/>根节点html元素对象宽度(height+padding+border)："+document.documentElement.offsetWidth);
+            document.write("<br/>根节点html元素对象高度："+document.documentElement.offsetHeight);
+            document.write("<br/>html内容的实际宽度（滚动宽度）："+document.documentElement.scrollWidth);
+            document.write("<br/>html内容的实际高度（滚动高度）："+document.documentElement.scrollHeight);
+            document.write("<br/>html左边框宽度(margin)："+document.documentElement.clientLeft);
+            document.write("<br/>html右边框宽度(margin)："+document.documentElement.clientTop);
+            document.write("<br/>html相对于整个页面的位置Left："+document.documentElement.offsetLeft);
+            document.write("<br/>html相对于整个页面的位置Top："+document.documentElement.offsetTop);
+            document.write("<br/>向右滚动过的像素数："+document.documentElement.scrollLeft);
+            document.write("<br/>向下滚动过的像素数："+document.documentElement.scrollTop);
+        </script>
+    </div>
+</body>
+</html>
