@@ -5,18 +5,24 @@
     <title>Document</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <style>
+    <style type="text/css">
         *{
             border-style: dashed;
             border-width: 1px;
             border-color: black;
         }
-        #inline-block-ico {
-            /* https://zhuanlan.zhihu.com/p/35848175
-             * font-size: 0; 在IE7及以下浏览器依然会残留1px的间隙
-            */
-            font-size: 0;
-            -webkit-text-size-adjust:none;/*支持chrome 不支持Safari*/
+        *:hover {
+            border-style: dotted;
+            border-width: 2px;
+            border-color: #fff;
+            /* background-color: #fff; */
+        }
+        html{
+            background-color: #e2e1e4;
+        }
+        #documentElement{
+            /* https://www.cnblogs.com/chendc/p/9298832.html */
+            font: 8px "sans-serif";
         }
         img {
             max-width: 64px;
@@ -28,7 +34,7 @@
         .box-avatar {
             display: flex;
             flex-wrap: wrap;
-            place-content: center start;/*可代替下面俩 接受 1 or 2 值*/
+            place-content: center center;/*可代替下面俩 接受 1 or 2 值*/
             align-content: center;/*垂直居中 对 flex-wrap: nowarp 无效*/
             justify-content: center;/*水平居中 对 display: block 无效*/
             width: 160px;
@@ -42,6 +48,13 @@
             height: 100%;
             background-color: #baccd9;
             border-radius: 8%;
+        }
+        #inline-block-ico {
+            /* https://zhuanlan.zhihu.com/p/35848175
+             * font-size: 0; 在IE7及以下浏览器依然会残留1px的间隙
+            */
+            font-size: 0;
+            -webkit-text-size-adjust:none;/*支持chrome 不支持Safari*/
         }
         /** 使用 inline-block 行内块元素布局 
           * 父元素为相对定位，子元素设置绝对定位
@@ -64,7 +77,13 @@
 </head>
 <body>
     <h1>这是一个一级标题</h1>
-    <marquee loop="0" bgcolor="pink">在这里放一只猫猫，学累的人可以摸摸她，但是别摸死了</marquee>
+    <div style="display: flex;
+                font: 20px YouYuan;
+                color: #fbecde;
+                background-color: #126e82;">
+        <div style="margin: auto;">在这里放一只猫猫，学累的人可以摸摸她，但是别摸死了</div>
+    </div>
+    <!-- <marquee loop="0" bgcolor="pink">在这里放一只猫猫，学累的人可以摸摸她，但是别摸死了</marquee> -->
     <div class="box-avatar">
         <img class="avatar" src="/images/e7838cc9-ee3d-4dd6-9a62-448a240a26e4.tmp.ico" alt="发现">
     </div>
@@ -75,6 +94,25 @@
         <div class="box-aaaa">
             <img class="aaaa" src="/images/ed438eb9-8a7c-400b-9f09-879298ab8c05.tmp.ico" alt="猫猫，启动！">
         </div>
+    </div>
+
+    <div id="documentElement">
+        <!-- https://blog.csdn.net/u010200222/article/details/45622687 -->
+        <script type="text/javascript">
+            document.write("浏览器分辨率："+document.documentElement.clientWidth+"*"+document.documentElement.clientHeight);
+            document.write("<br/>窗体宽度："+document.documentElement.clientWidth);
+            document.write("<br/>窗体高度："+document.documentElement.clientHeight);
+            document.write("<br/>根节点html元素对象宽度(height+padding+border)："+document.documentElement.offsetWidth);
+            document.write("<br/>根节点html元素对象高度："+document.documentElement.offsetHeight);
+            document.write("<br/>html内容的实际宽度（滚动宽度）："+document.documentElement.scrollWidth);
+            document.write("<br/>html内容的实际高度（滚动高度）："+document.documentElement.scrollHeight);
+            document.write("<br/>html左边框宽度(margin)："+document.documentElement.clientLeft);
+            document.write("<br/>html右边框宽度(margin)："+document.documentElement.clientTop);
+            document.write("<br/>html相对于整个页面的位置Left："+document.documentElement.offsetLeft);
+            document.write("<br/>html相对于整个页面的位置Top："+document.documentElement.offsetTop);
+            document.write("<br/>向右滚动过的像素数："+document.documentElement.scrollLeft);
+            document.write("<br/>向下滚动过的像素数："+document.documentElement.scrollTop);
+        </script>
     </div>
 </body>
 </html>
