@@ -2,86 +2,16 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/fontawesome-free-6.4.0-web/css/all.css">
-    <link rel="stylesheet" href="./css/04_style.css">
-    <!-- <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.0/css/all.css" rel="stylesheet"> -->
-<!--     
-    <link rel="icon" href="/ico/favicon32.ico" sizes="32x32" type="image/png"> 
--->
-    <title>Document</title>
-    <style type="text/css">
-        *{
-            border-style: dashed;
-            border-width: 1px;
-            border-color: black;
-        }
-        *:hover {
-            border-style: dotted;
-            border-width: 2px;
-            border-color: #fff;
-            /* background-color: #fff; */
-        }
-        html{
-            background-color: #e2e1e4;
-        }
-        #documentElement{
-            /* https://www.cnblogs.com/chendc/p/9298832.html */
-            font: 8px "sans-serif";
-        }
-        img {
-            max-width: 64px;
-            max-height: 64px;
-        }
-        /** 使用 flew *-content
-          * 子元素自动压缩，不会产生 overflow
-        */
-        .box-avatar {
-            display: flex;
-            flex-wrap: wrap;
-            place-content: center center;/*可代替下面俩 接受 1 or 2 值*/
-            align-content: center;/*垂直居中 对 flex-wrap: nowarp 无效*/
-            justify-content: center;/*水平居中 对 display: block 无效*/
-            width: 160px;
-            height: 80px;
-            background-color: aqua;
-        }
-        .avatar {
-            margin: auto;
-            /*水平居中 这条属性可代替 *-content */
-            width: 100%;
-            height: 100%;
-            background-color: #baccd9;
-            border-radius: 8%;
-        }
-        #inline-block-ico {
-            /* https://zhuanlan.zhihu.com/p/35848175
-             * font-size: 0; 在IE7及以下浏览器依然会残留1px的间隙
-            */
-            font-size: 0;
-            -webkit-text-size-adjust:none;/*支持chrome 不支持Safari*/
-        }
-        /** 使用 inline-block 行内块元素布局 
-          * 父元素为相对定位，子元素设置绝对定位
-          * 子元素未知高度和宽度
-        */
-        .box-aaaa {
-            display: inline-block;
-            position: relative;
-            width: 80px;
-            height: 80px;
-            overflow: hidden;
-        }
-        .aaaa {
-            position: absolute;
-            max-width: 95%;
-            max-height: 95%;
-            left: 50%;
-            top: 50%;
-            transform: translateX(-50%) translateY(-50%);
-        }
-    </style>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="stylesheet" href="../static/css/04_style.css">
+    <link rel="stylesheet" href="../static/css/04_self.css">
+    <!-- <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.0/css/all.css" rel="stylesheet">    
+    <link rel="icon" href="/ico/favicon32.ico" sizes="32x32" type="image/png">  -->
+
+    <title>04 index</title>
+
 </head>
 <body>
     <h1 style="text-align: center;">按ctrl+f5键 强制刷新屏幕</h1>
@@ -94,17 +24,17 @@
     </div>
     <!-- <marquee loop="0" bgcolor="pink">在这里放一只猫猫，学累的人可以摸摸她，但是别摸死了</marquee> -->
     <div class="box-avatar">
-        <img class="avatar" src="./images/e7838cc9-ee3d-4dd6-9a62-448a240a26e4.tmp.ico" alt="发现">
+        <img class="avatar" src="../static/images/e7838cc9-ee3d-4dd6-9a62-448a240a26e4.tmp.ico" alt="发现">
     </div>
     <div id="inline-block-ico">
         <div class="box-aaaa">
-            <img class="aaaa" src="./images/ed438eb9-8a7c-400b-9f09-879298ab8c05.tmp.ico" alt="猫猫，启动！">
+            <img class="aaaa" src="../static/images/ed438eb9-8a7c-400b-9f09-879298ab8c05.tmp.ico" alt="猫猫，启动！">
         </div>
         <div class="box-aaaa">
-            <img class="aaaa" src="./images/ed438eb9-8a7c-400b-9f09-879298ab8c05.tmp.ico" alt="猫猫，启动！">
+            <img class="aaaa" src="../static/images/ed438eb9-8a7c-400b-9f09-879298ab8c05.tmp.ico" alt="猫猫，启动！">
         </div>
         <div class="box-aaaa">
-            <img class="aaaa" src="favicon.ico" alt="猫猫，启动！">
+            <img class="aaaa" src="../favicon.ico" alt="猫猫，启动！">
         </div>
         <div class="box-aaaa">
             <img class="aaaa" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAAXNSR0IArs4c6QAABNpJRE
@@ -125,10 +55,11 @@
             28jV7WbgJuBG9+rWo3OuAH+6V7c/u1e3zUop+T+p9Q9BpPGeBjSq+gAAAABJRU5ErkJggg==" alt="QQ图标-base64">
         </div>
         <div class="box-aaaa">
-            <img class="aaaa" src="./images/bilibili/emoticon/崩坏3·光辉矢愿_大佬喝可乐.png" alt="崩坏3·光辉矢愿_大佬喝可乐">
+            <img class="aaaa" src="../static/images/bilibili/emoticon/崩坏3·光辉矢愿_大佬喝可乐.png" alt="崩坏3·光辉矢愿_大佬喝可乐">
         </div>
         <div class="box-aaaa">
-            <img class="aaaa" src="./images/bilibili/logo/c8fd97a40bf79f03e7b76cbc87236f612caef7b2.png" alt="bilibili">
+            <img class="aaaa" src="../static/images/bilibili/logo/c8fd97a40bf79f03e7b76cbc87236f612caef7b2.png" alt="bilibili"
+                style="background-color: #00aeec;">
         </div>
 
 
@@ -136,12 +67,15 @@
     <!-- ul>li*5>a -->
     😊
     <ul>
-        <li>
+        <!-- <li>
             <a href="">
                 <img class="svg-icon" src="./fontawesome-free-6.4.0-web/svgs/brands/bilibili.svg" alt="bilibili"></a>
-        </li>
+        </li> -->
         <li><a href="https://www.bilibili.com">
-            <img class="svg-icon" src="./svg/bilibili.svg" alt="哔哩哔哩-bilibili"></a>
+            <img class="svg-icon" src="../static/svg/bilibili.svg" alt="哔哩哔哩-bilibili"></a>
+        </li>
+        <li><a href="">
+            <img class="svg-icon" src="" alt=""></a>
         </li>
         <li><a href="">
             <img class="svg-icon" src="" alt=""></a>
