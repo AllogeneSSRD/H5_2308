@@ -80,7 +80,7 @@ li a:hover::before {
 #cover {
     display: flex;
     position: relative;
-    overflow: hidden;
+    overflow: auto;
     align-items: center;
     justify-content: center;
     width: 100vw;
