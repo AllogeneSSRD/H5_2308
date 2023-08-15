@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+main {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 25vh;
+    background-color: #648e93;
+    /* z-index: 25; */
+}
+
+.❤️🧡💛💚💙💜🤎🖤🤍 {
+    padding: 0;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    display: flex;
+    z-index: 3;
+}
+
+li {
+    list-style: none;
+    z-index: 4;
+}
+
+ul li {
+    margin: 0 12px;
+}
+
+li a {
+    display: block;
+    position: relative;
+    color: #fbf2e3;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 48px;
+    border-radius: 50%;
+    background-color: #648e93;
+    transition: 0.1s;
+}
+
+li a:hover {
+    text-shadow: 0 0 3px #d8e3e7;
+    font-size: 26px;
+    transition: 0.1s;
+}
+
+li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: #93d5dc;
+    transition: 0.4s;
+    transform: scale(0.8);
+    z-index: -1;
+}
+
+li a:hover::before {
+    box-shadow: 0 0 12px 2px #93d5dc;
+    transform: scale(1.02);
+}
+
+#cover {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 25vh;
+    background: transparent;
+    z-index: 30;
+}
+
+#cover ul li a .svg-icon {
+    display: flex;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    height: 50%;
+    transform: translateX(-50%) translateY(-48%);
+    transition: 0.1s;
+    /* filter: invert(1); */
+    }
+
+#cover ul li a:hover .svg-icon {
+    width: 54.17%;
+    height: 54.17%;
+    /* transform: translateX(-50%) translateY(-50%); */
+    filter: invert(0) drop-shadow(0 0 2px #00aeec);
+    }
+
+wave {
+    position: absolute;
+    background-color: #e0ffff;
+    transform: translate(-50%, -50%);/*中心偏移*/
+    /* pointer-events: none; */
+    border-radius: 50%;
+    animation: diffusionanimate 800ms linear infinite;
+    z-index: 10;
+}
+
+@keyframes diffusionanimate {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    75% {
+        opacity: 0.05;
+    }
+    100% {
+        width: 10em;
+        height: 10em;
+        opacity: 0;
+    }
+}
