@@ -1,16 +1,63 @@
-*{
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+/* @font-face {
+    font-family: "阿里妈妈东方大楷 Regular";font-weight: 400;src: url("//at.alicdn.com/wf/webfont/x3VkRI5keEUN/yv0ElxAmR7p2.woff2") format("woff2"),
+    url("//at.alicdn.com/wf/webfont/x3VkRI5keEUN/aejWzW5OZqK3.woff") format("woff");
+    font-display: swap;
+    } */
+
+
+@font-face {
+    font-family: "Alimama DongFangDaKai Regular";
+    font-weight: 400;
+    src: url("../../static/ttf/AlimamaDongFangDaKai.ttf") format("truetype")
+    url("../../static/ttf/ZrYznGN3PXfY/JXHTWoqUM2zm.woff2") format("woff2"),
+    url("../../static/ttf/ZrYznGN3PXfY/JXHTWoqUM2zm.woff") format("woff");
+    font-display: swap;
+    }
+
+    @font-face {
+        font-family: "Alimama DaoLiTi";
+        font-weight: 400;
+        src: url("../../static/woff/AlimamaDaoLiTi/Me3ExWo6BxVn.woff2") format("woff2"),
+        url("../../static/woff/AlimamaDaoLiTi/Me3ExWo6BxVn.woff") format("woff");
+        font-display: auto;
+        }
+
+/* 
+@font-face {
+    font-family: "AlimamaDongFangDaKai";
+    font-weight: 40;
+    src: url("//at.alicdn.com/wf/webfont/x3VkRI5keEUN/yv0ElxAmR7p2.woff2") format("woff2");
+    url("../../static/ttf/ZrYznGN3PXfY/JXHTWoqUM2zm.woff") format("woff");
+    font-display: auto;
+    } */
+
+#AlimamaDongFangDaKai{
+    font-family: "Alimama DaoLiTi";
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* *{
     border-style: dashed;
     border-width: 1px;
     border-color: black;
-}
+} */
 *:hover {
     border-style: dotted;
     border-width: 2px;
-    border-color: #fff;
+    /* border-color: #fff; */
     /* background-color: #fff; */
 }
 html{
     background-color: #e2e1e4;
+}
+
+h1{
+    font-family: "Alimama DaoLiTi" !important;
+    text-align: center;
 }
 #documentElement{
     /* https://www.cnblogs.com/chendc/p/9298832.html */
@@ -41,25 +88,33 @@ img {
     background-color: #baccd9;
     border-radius: 8%;
 }
-#inline-block-ico {
+.inline-block-ico {
     /* https://zhuanlan.zhihu.com/p/35848175
      * font-size: 0; 在IE7及以下浏览器依然会残留1px的间隙
     */
     font-size: 0;
     -webkit-text-size-adjust:none;/*支持chrome 不支持Safari*/
 }
+.inline-block-svg {
+    /* https://zhuanlan.zhihu.com/p/35848175
+     * font-size: 0; 在IE7及以下浏览器依然会残留1px的间隙
+    */
+    font-size: 0;
+    -webkit-text-size-adjust:none;/*支持chrome 不支持Safari*/
+}
+
 /** 使用 inline-block 行内块元素布局 
   * 父元素为相对定位，子元素设置绝对定位
   * 子元素未知高度和宽度
 */
-.box-aaaa {
+.img-box {
     display: inline-block;
     position: relative;
     width: 80px;
     height: 80px;
     overflow: hidden;
 }
-.aaaa {
+.img-box .self-img {
     position: absolute;
     max-width: 95%;
     max-height: 95%;
@@ -67,3 +122,14 @@ img {
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
 }
+.svg-box{
+    display: inline-grid;
+    place-items: center;
+    width: 80px;
+    height: 80px;
+}
+.svg-box .icon{
+    font-size: 60px;
+}
+
+
