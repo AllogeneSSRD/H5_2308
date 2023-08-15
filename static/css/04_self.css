@@ -45,12 +45,14 @@
     border-width: 1px;
     border-color: black;
 } */
-*:hover {
+
+/* *:hover {
     border-style: dotted;
     border-width: 2px;
-    /* border-color: #fff; */
-    /* background-color: #fff; */
-}
+    border-color: #fff;
+    background-color: #fff;
+} */
+
 html{
     background-color: #e2e1e4;
 }
