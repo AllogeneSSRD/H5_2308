@@ -12,7 +12,6 @@
 
     <title>04 index</title>
 
-</head>
 <body>
     <h1>按ctrl+f5键 强制刷新屏幕</h1>
     <div style="display: flex;
@@ -82,27 +81,64 @@
         style="max-width: 256px; max-height: 256px;"
         src="../static/svg/山茶花.svg" alt="山茶花">
     <p id="AlimamaDongFangDaKai">AlimamaDongFangDaKai</p>
-    <ul>
-        <li>
-            <a href="">
-                <img class="svg-icon" src="../static/fontawesome-free-6.4.0-web/svgs/brands/bilibili.svg" alt="bilibili"></a>
-        </li>
-        <li><a href="https://www.bilibili.com">
-            <img class="svg-icon" src="../static/svg/bilibili.svg" alt="哔哩哔哩-bilibili"></a>
-        </li>
-        <li><a href="">
-            <img class="svg-icon" src="" alt=""></a>
-        </li>
-        <li><a href="">
-            <img class="svg-icon" src="" alt=""></a>
-        </li>
-        <li><a href="">
-            <img class="svg-icon" src="" alt=""></a>
-        </li>
-        <li><a href="">
-            <img class="svg-icon" src="" alt=""></a>
-        </li>
-    </ul>
+    
+    <main id="bottom">
+        <script type="text/javascript">
+            const wavebuttons = document.querySelectorAll('#bottom');
+            wavebuttons.forEach(wbtn => {
+                wbtn.addEventListener('click', function(awave) {
+    
+                    let x = awave.offsetX + awave.target.offsetLeft;
+                    let y = awave.offsetY + awave.target.offsetTop;
+                    // let x = awave.clientX - awave.target.offsetLeft
+                    // let y = awave.clientY - awave.target.offsetTop
+                    console.log(//awave.offsetX, awave.offsetY,
+                                awave.clientX, awave.clientY,
+                                awave.target.offsetLeft,
+                                awave.target.offsetTop)
+    
+                    let ripples = document.createElement('wave');
+                    ripples.style.left = x + 'px';
+                    ripples.style.top = y + 'px';
+                    this.appendChild(ripples);
+                    
+    
+                    setTimeout(() => {ripples.remove()}, 600);
+                })
+            })
+        </script>
+        <div id="cover">
+            <ul>
+            <li><a href="https://www.bilibili.com">
+                <img class="svg-icon" src="../static/svg/bilibili.svg" alt="哔哩哔哩-bilibili"></a>
+            </li>
+            <li><a href=""><i class="fab fa-github"></i></a>
+            </li>
+            <li><a href=""><i class="fab fa-weixin"></i></a>
+            </li>
+            <li><a href=""><i class="fab fa-weibo"></i></a>
+            </li>
+            <li><a href="">
+                <i class="fab fa-zhihu"></i></a>
+            </li>
+            <li><a href="">
+                <i class="fab fa-steam-symbol"></i></a>
+            </li>
+            <li><a href="">
+                <i class="fab fa-facebook"></i></a>
+            </li>
+            <li><a href="">
+                <i class="fab fa-google"></i></a>
+            </li>
+            <li><a href="">
+                <i class="fab fa-apple"></i></a>
+            </li>
+            <li><a href="">
+                <i class="fab fa-edge"></i></a>
+            </li>
+            </ul>
+        </div>
+    </main>
 
 
 
